@@ -14,6 +14,8 @@
 		3CB854541DEA9454007F905E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CB854521DEA9454007F905E /* LaunchScreen.storyboard */; };
 		3CB8545F1DEA9454007F905E /* goscore_rustTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB8545E1DEA9454007F905E /* goscore_rustTests.swift */; };
 		3CB8546A1DEA9454007F905E /* goscore_rustUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB854691DEA9454007F905E /* goscore_rustUITests.swift */; };
+		3CB854781DEA9483007F905E /* GoBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB854771DEA9483007F905E /* GoBoardView.swift */; };
+		3CB8547A1DEA9687007F905E /* GoBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB854791DEA9687007F905E /* GoBoard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		3CB854651DEA9454007F905E /* goscore-rustUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "goscore-rustUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB854691DEA9454007F905E /* goscore_rustUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goscore_rustUITests.swift; sourceTree = "<group>"; };
 		3CB8546B1DEA9454007F905E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CB854771DEA9483007F905E /* GoBoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoBoardView.swift; sourceTree = "<group>"; };
+		3CB854791DEA9687007F905E /* GoBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoBoard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				3CB854501DEA9454007F905E /* Assets.xcassets */,
 				3CB854521DEA9454007F905E /* LaunchScreen.storyboard */,
 				3CB854551DEA9454007F905E /* Info.plist */,
+				3CB854771DEA9483007F905E /* GoBoardView.swift */,
+				3CB854791DEA9687007F905E /* GoBoard.swift */,
 			);
 			path = "goscore-rust";
 			sourceTree = "<group>";
@@ -262,7 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CB854781DEA9483007F905E /* GoBoardView.swift in Sources */,
 				3CB8544C1DEA9454007F905E /* ViewController.swift in Sources */,
+				3CB8547A1DEA9687007F905E /* GoBoard.swift in Sources */,
 				3CB8544A1DEA9454007F905E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,10 +425,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YAQK386STA;
 				INFOPLIST_FILE = "goscore-rust/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.calebjones.goscore-rust";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -430,10 +440,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YAQK386STA;
 				INFOPLIST_FILE = "goscore-rust/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.calebjones.goscore-rust";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

@@ -53,6 +53,23 @@ class GoBoardView : UIView {
         context.strokePath()
         
         // Draw the territory
+        context.setAlpha(0.4)
+        for row in 0..<board.height {
+            for col in 0..<board.width {
+                let x = CGFloat(col) * cellWidth + cellWidth / 2
+                let y = CGFloat(row) * cellHeight + cellHeight / 2
+                switch board[(row, col)].score {
+                case .some(.white):
+                    context.setFillColor(UIColor.white.cgColor)
+                    context.fill(CGRect(x: x, y: y, width: cellWidth, height: cellHeight))
+                case .some(.black):
+                    context.setFillColor(UIColor.black.cgColor)
+                    context.fill(CGRect(x: x, y: y, width: cellWidth, height: cellHeight))
+                case .none:
+                    break
+                }
+            }
+        }
         
         // Draw the stones
         let stoneRadius = min(cellWidth, cellHeight) * 0.45

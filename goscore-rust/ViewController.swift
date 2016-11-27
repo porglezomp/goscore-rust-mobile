@@ -26,6 +26,7 @@ class ViewController: UIViewController {
                                  e,e,w,e,e,
                                  e,e,w,e,e],
                         width: 5, height: 5)
+        board.scoreStones()
         goView.board = board
     }
 

@@ -10,7 +10,7 @@ import Foundation
 
 class GoBoard {
     
-    private var board: RawGoBoard;
+    private var board: RawGoBoard
     var width: UInt {
         get { return UInt(board.width) }
     }
@@ -19,11 +19,11 @@ class GoBoard {
     }
     
     init() {
-        board = RawGoBoard();
+        board = RawGoBoard()
     }
     
     init(width: UInt, height: UInt) {
-        self.board = RawGoBoard(width: size_t(width), height: size_t(height));
+        self.board = RawGoBoard(width: size_t(width), height: size_t(height))
     }
     
     init(stones: [Stone], width: UInt, height: UInt) {
@@ -92,13 +92,11 @@ struct Stone {
     }
     
     private mutating func set(bit: CChar, to isSet: Bool) {
-        print("Set bit \(bit) to \(isSet)")
         if isSet {
             self.value |= bit
         } else {
             self.value &= ~bit
         }
-        print("\(self.value)")
     }
     
     var present: Bool {

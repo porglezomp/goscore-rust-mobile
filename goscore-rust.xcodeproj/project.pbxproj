@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3CB8544A1DEA9454007F905E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB854491DEA9454007F905E /* AppDelegate.swift */; };
+		3CB8544C1DEA9454007F905E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB8544B1DEA9454007F905E /* ViewController.swift */; };
+		3CB8544F1DEA9454007F905E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CB8544D1DEA9454007F905E /* Main.storyboard */; };
+		3CB854511DEA9454007F905E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CB854501DEA9454007F905E /* Assets.xcassets */; };
+		3CB854541DEA9454007F905E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CB854521DEA9454007F905E /* LaunchScreen.storyboard */; };
+		3CB8545F1DEA9454007F905E /* goscore_rustTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB8545E1DEA9454007F905E /* goscore_rustTests.swift */; };
+		3CB8546A1DEA9454007F905E /* goscore_rustUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB854691DEA9454007F905E /* goscore_rustUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3CB8545B1DEA9454007F905E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CB8543E1DEA9453007F905E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CB854451DEA9453007F905E;
+			remoteInfo = "goscore-rust";
+		};
+		3CB854661DEA9454007F905E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CB8543E1DEA9453007F905E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CB854451DEA9453007F905E;
+			remoteInfo = "goscore-rust";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3CB854461DEA9454007F905E /* goscore-rust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "goscore-rust.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB854491DEA9454007F905E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3CB8544B1DEA9454007F905E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3CB8544E1DEA9454007F905E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3CB854501DEA9454007F905E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3CB854531DEA9454007F905E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3CB854551DEA9454007F905E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CB8545A1DEA9454007F905E /* goscore-rustTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "goscore-rustTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB8545E1DEA9454007F905E /* goscore_rustTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goscore_rustTests.swift; sourceTree = "<group>"; };
+		3CB854601DEA9454007F905E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CB854651DEA9454007F905E /* goscore-rustUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "goscore-rustUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB854691DEA9454007F905E /* goscore_rustUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goscore_rustUITests.swift; sourceTree = "<group>"; };
+		3CB8546B1DEA9454007F905E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3CB854431DEA9453007F905E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CB854571DEA9454007F905E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CB854621DEA9454007F905E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3CB8543D1DEA9453007F905E = {
+			isa = PBXGroup;
+			children = (
+				3CB854481DEA9454007F905E /* goscore-rust */,
+				3CB8545D1DEA9454007F905E /* goscore-rustTests */,
+				3CB854681DEA9454007F905E /* goscore-rustUITests */,
+				3CB854471DEA9454007F905E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3CB854471DEA9454007F905E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3CB854461DEA9454007F905E /* goscore-rust.app */,
+				3CB8545A1DEA9454007F905E /* goscore-rustTests.xctest */,
+				3CB854651DEA9454007F905E /* goscore-rustUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3CB854481DEA9454007F905E /* goscore-rust */ = {
+			isa = PBXGroup;
+			children = (
+				3CB854491DEA9454007F905E /* AppDelegate.swift */,
+				3CB8544B1DEA9454007F905E /* ViewController.swift */,
+				3CB8544D1DEA9454007F905E /* Main.storyboard */,
+				3CB854501DEA9454007F905E /* Assets.xcassets */,
+				3CB854521DEA9454007F905E /* LaunchScreen.storyboard */,
+				3CB854551DEA9454007F905E /* Info.plist */,
+			);
+			path = "goscore-rust";
+			sourceTree = "<group>";
+		};
+		3CB8545D1DEA9454007F905E /* goscore-rustTests */ = {
+			isa = PBXGroup;
+			children = (
+				3CB8545E1DEA9454007F905E /* goscore_rustTests.swift */,
+				3CB854601DEA9454007F905E /* Info.plist */,
+			);
+			path = "goscore-rustTests";
+			sourceTree = "<group>";
+		};
+		3CB854681DEA9454007F905E /* goscore-rustUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3CB854691DEA9454007F905E /* goscore_rustUITests.swift */,
+				3CB8546B1DEA9454007F905E /* Info.plist */,
+			);
+			path = "goscore-rustUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3CB854451DEA9453007F905E /* goscore-rust */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CB8546E1DEA9454007F905E /* Build configuration list for PBXNativeTarget "goscore-rust" */;
+			buildPhases = (
+				3CB854421DEA9453007F905E /* Sources */,
+				3CB854431DEA9453007F905E /* Frameworks */,
+				3CB854441DEA9453007F905E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "goscore-rust";
+			productName = "goscore-rust";
+			productReference = 3CB854461DEA9454007F905E /* goscore-rust.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3CB854591DEA9454007F905E /* goscore-rustTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CB854711DEA9454007F905E /* Build configuration list for PBXNativeTarget "goscore-rustTests" */;
+			buildPhases = (
+				3CB854561DEA9454007F905E /* Sources */,
+				3CB854571DEA9454007F905E /* Frameworks */,
+				3CB854581DEA9454007F905E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3CB8545C1DEA9454007F905E /* PBXTargetDependency */,
+			);
+			name = "goscore-rustTests";
+			productName = "goscore-rustTests";
+			productReference = 3CB8545A1DEA9454007F905E /* goscore-rustTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3CB854641DEA9454007F905E /* goscore-rustUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CB854741DEA9454007F905E /* Build configuration list for PBXNativeTarget "goscore-rustUITests" */;
+			buildPhases = (
+				3CB854611DEA9454007F905E /* Sources */,
+				3CB854621DEA9454007F905E /* Frameworks */,
+				3CB854631DEA9454007F905E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3CB854671DEA9454007F905E /* PBXTargetDependency */,
+			);
+			name = "goscore-rustUITests";
+			productName = "goscore-rustUITests";
+			productReference = 3CB854651DEA9454007F905E /* goscore-rustUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3CB8543E1DEA9453007F905E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Caleb Jones";
+				TargetAttributes = {
+					3CB854451DEA9453007F905E = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = YAQK386STA;
+						ProvisioningStyle = Automatic;
+					};
+					3CB854591DEA9454007F905E = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = YAQK386STA;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3CB854451DEA9453007F905E;
+					};
+					3CB854641DEA9454007F905E = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = YAQK386STA;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3CB854451DEA9453007F905E;
+					};
+				};
+			};
+			buildConfigurationList = 3CB854411DEA9453007F905E /* Build configuration list for PBXProject "goscore-rust" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3CB8543D1DEA9453007F905E;
+			productRefGroup = 3CB854471DEA9454007F905E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3CB854451DEA9453007F905E /* goscore-rust */,
+				3CB854591DEA9454007F905E /* goscore-rustTests */,
+				3CB854641DEA9454007F905E /* goscore-rustUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3CB854441DEA9453007F905E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CB854541DEA9454007F905E /* LaunchScreen.storyboard in Resources */,
+				3CB854511DEA9454007F905E /* Assets.xcassets in Resources */,
+				3CB8544F1DEA9454007F905E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CB854581DEA9454007F905E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CB854631DEA9454007F905E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3CB854421DEA9453007F905E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CB8544C1DEA9454007F905E /* ViewController.swift in Sources */,
+				3CB8544A1DEA9454007F905E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CB854561DEA9454007F905E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CB8545F1DEA9454007F905E /* goscore_rustTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CB854611DEA9454007F905E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CB8546A1DEA9454007F905E /* goscore_rustUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3CB8545C1DEA9454007F905E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CB854451DEA9453007F905E /* goscore-rust */;
+			targetProxy = 3CB8545B1DEA9454007F905E /* PBXContainerItemProxy */;
+		};
+		3CB854671DEA9454007F905E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CB854451DEA9453007F905E /* goscore-rust */;
+			targetProxy = 3CB854661DEA9454007F905E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3CB8544D1DEA9454007F905E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CB8544E1DEA9454007F905E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3CB854521DEA9454007F905E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CB854531DEA9454007F905E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3CB8546C1DEA9454007F905E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3CB8546D1DEA9454007F905E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3CB8546F1DEA9454007F905E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YAQK386STA;
+				INFOPLIST_FILE = "goscore-rust/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.calebjones.goscore-rust";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3CB854701DEA9454007F905E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YAQK386STA;
+				INFOPLIST_FILE = "goscore-rust/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.calebjones.goscore-rust";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		3CB854721DEA9454007F905E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = YAQK386STA;
+				INFOPLIST_FILE = "goscore-rustTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.calebjones.goscore-rustTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/goscore-rust.app/goscore-rust";
+			};
+			name = Debug;
+		};
+		3CB854731DEA9454007F905E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = YAQK386STA;
+				INFOPLIST_FILE = "goscore-rustTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.calebjones.goscore-rustTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/goscore-rust.app/goscore-rust";
+			};
+			name = Release;
+		};
+		3CB854751DEA9454007F905E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = YAQK386STA;
+				INFOPLIST_FILE = "goscore-rustUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.calebjones.goscore-rustUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "goscore-rust";
+			};
+			name = Debug;
+		};
+		3CB854761DEA9454007F905E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = YAQK386STA;
+				INFOPLIST_FILE = "goscore-rustUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.calebjones.goscore-rustUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "goscore-rust";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3CB854411DEA9453007F905E /* Build configuration list for PBXProject "goscore-rust" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CB8546C1DEA9454007F905E /* Debug */,
+				3CB8546D1DEA9454007F905E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CB8546E1DEA9454007F905E /* Build configuration list for PBXNativeTarget "goscore-rust" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CB8546F1DEA9454007F905E /* Debug */,
+				3CB854701DEA9454007F905E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3CB854711DEA9454007F905E /* Build configuration list for PBXNativeTarget "goscore-rustTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CB854721DEA9454007F905E /* Debug */,
+				3CB854731DEA9454007F905E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3CB854741DEA9454007F905E /* Build configuration list for PBXNativeTarget "goscore-rustUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CB854751DEA9454007F905E /* Debug */,
+				3CB854761DEA9454007F905E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3CB8543E1DEA9453007F905E /* Project object */;
+}

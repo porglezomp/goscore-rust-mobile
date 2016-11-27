@@ -23,18 +23,58 @@ class GoBoardView : UIView {
         guard let context = UIGraphicsGetCurrentContext()
             else { return }
         
+        // Find the drawing offset
+        let size = min(rect.width, rect.height)
+        let x0 = (rect.width - size) / 2
+        let y0 = (rect.height - size) / 2
+        context.translateBy(x: x0, y: y0)
+        
         // Draw the background
         context.setFillColor(UIColor.brown.cgColor)
-        let size = min(rect.width, rect.height)
-        let x = (rect.width - size) / 2
-        let y = (rect.height - size) / 2
-        context.fill(CGRect(x: x, y: y, width: size, height: size))
+        context.fill(CGRect(x: 0, y: 0, width: size, height: size))
         
         // Draw the board lines
+        context.setStrokeColor(UIColor.black.cgColor)
+        let cellWidth = size / CGFloat(board.width + 1)
+        let cellHeight = size / CGFloat(board.height + 1)
+        
+        for row in 0..<board.height {
+            let y = CGFloat(row) * cellHeight + cellHeight
+            context.addLines(between: [CGPoint(x: cellWidth, y: y),
+                                       CGPoint(x: size - cellWidth, y: y)])
+        }
+        
+        for col in 0..<board.width {
+            let x = CGFloat(col) * cellWidth + cellWidth
+            context.addLines(between: [CGPoint(x: x, y: cellHeight),
+                                       CGPoint(x: x, y: size - cellHeight)])
+        }
+        
+        context.strokePath()
         
         // Draw the territory
         
         // Draw the stones
+        let stoneRadius = min(cellWidth, cellHeight) * 0.45
+        context.setAlpha(1)
+        for row in 0..<board.height {
+            for col in 0..<board.width {
+                let x = CGFloat(col) * cellWidth + cellWidth - stoneRadius
+                let y = CGFloat(row) * cellHeight + cellHeight - stoneRadius
+                switch board[(row, col)].color {
+                case .some(.white):
+                    context.setFillColor(UIColor.white.cgColor)
+                    context.fillEllipse(in: CGRect(x: x, y: y,
+                                                   width: stoneRadius * 2, height: stoneRadius * 2))
+                case .some(.black):
+                    context.setFillColor(UIColor.black.cgColor)
+                    context.fillEllipse(in: CGRect(x: x, y: y,
+                                                   width: stoneRadius * 2, height: stoneRadius * 2))
+                case .none:
+                    break
+                }
+            }
+        }
         
         // Mark the dead stones
     }

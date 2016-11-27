@@ -17,7 +17,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        goView.board = board;
+        let e = Stone()
+        let w = Stone(color: .white)
+        let b = Stone(color: .black)
+        board = GoBoard(stones: [e,e,b,e,e,
+                                 e,e,b,e,e,
+                                 b,b,b,w,w,
+                                 e,e,w,e,e,
+                                 e,e,w,e,e],
+                        width: 5, height: 5)
+        goView.board = board
     }
 
     override func didReceiveMemoryWarning() {

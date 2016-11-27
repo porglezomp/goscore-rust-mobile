@@ -11,9 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var board: GoBoard = GoBoard()
-    var goView: GoBoardView! {
-        get { return super.view as! GoBoardView }
-    }
+    @IBOutlet var goView: GoBoardView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,15 +23,22 @@ class ViewController: UIViewController {
         board = GoBoard(stones: [e,e,b,e,e,
                                  e,e,b,e,e,
                                  b,b,b,w,w,
-                                 w,e,w,e,d,
+//                                 w,e,w,e,d,
                                  e,w,w,d,e],
-                        width: 5, height: 5)
+                        width: 5, height: 4)
         board.scoreStones()
         goView.board = board
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if touches.count == 1 {
+            let touch = touches.first!
+            touch.location(in: goView)
+        }
     }
 
 }

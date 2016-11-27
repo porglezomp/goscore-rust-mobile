@@ -18,36 +18,43 @@ class GoBoardView : UIView {
             self.setNeedsDisplay()
         }
     }
+    var aspectRatio: NSLayoutConstraint?
+    
+    override func updateConstraints() {
+        super.updateConstraints()
+        if let constraint = aspectRatio {
+            self.removeConstraint(constraint)
+        }
+        aspectRatio = NSLayoutConstraint(item: self, attribute: .width, relatedBy: .equal,
+                                         toItem: self, attribute: .height,
+                                         multiplier: CGFloat(board.width+1) / CGFloat(board.height+1),
+                                         constant: 0)
+        self.addConstraint(aspectRatio!)
+    }
 
     override func draw(_ rect: CGRect) {
         guard let context = UIGraphicsGetCurrentContext()
             else { return }
         
-        // Find the drawing offset
-        let size = min(rect.width, rect.height)
-        let x0 = (rect.width - size) / 2
-        let y0 = (rect.height - size) / 2
-        context.translateBy(x: x0, y: y0)
-        
         // Draw the background
         context.setFillColor(UIColor.brown.cgColor)
-        context.fill(CGRect(x: 0, y: 0, width: size, height: size))
+        context.fill(CGRect(x: 0, y: 0, width: rect.width, height: rect.height))
         
         // Draw the board lines
         context.setStrokeColor(UIColor.black.cgColor)
-        let cellWidth = size / CGFloat(board.width + 1)
-        let cellHeight = size / CGFloat(board.height + 1)
+        let cellWidth = rect.width / CGFloat(board.width + 1)
+        let cellHeight = rect.height / CGFloat(board.height + 1)
         
         for row in 0..<board.height {
             let y = CGFloat(row) * cellHeight + cellHeight
             context.move(to: CGPoint(x: cellWidth, y: y))
-            context.addLine(to: CGPoint(x: size - cellWidth, y: y))
+            context.addLine(to: CGPoint(x: rect.width - cellWidth, y: y))
         }
         
         for col in 0..<board.width {
             let x = CGFloat(col) * cellWidth + cellWidth
             context.move(to: CGPoint(x: x, y: cellHeight))
-            context.addLine(to: CGPoint(x: x, y: size - cellHeight))
+            context.addLine(to: CGPoint(x: x, y: rect.height - cellHeight))
         }
         
         context.strokePath()
@@ -96,13 +103,12 @@ class GoBoardView : UIView {
         // Mark the dead stones
         context.setStrokeColor(UIColor.red.cgColor)
         context.setLineCap(.round)
-        context.setLineWidth(4)
+        context.setLineWidth(8)
         for row in 0..<board.height {
             for col in 0..<board.width {
                 let x = CGFloat(col) * cellWidth + cellWidth * (2/3)
                 let y = CGFloat(row) * cellHeight + cellHeight * (2/3)
                 if board[(row, col)].dead {
-                    print("\(row) \(col) is dead")
                     context.move(to: CGPoint(x: x, y: y))
                     context.addLine(to: CGPoint(x: x + cellWidth * (2/3),
                                                 y: y + cellHeight * (2/3)))

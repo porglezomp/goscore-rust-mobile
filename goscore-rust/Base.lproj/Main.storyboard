@@ -160,9 +160,6 @@
                             <constraint firstItem="WqC-RP-E4w" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xDy-61-HQQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xhE-zM-zKD" secondAttribute="trailing" constant="38" id="yTn-Dr-vvt"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="NIW-Jm-4BJ" appends="YES" id="NsC-cm-e3B"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="colorButton" destination="cdr-C7-PvA" id="rDy-Ir-CNf"/>
@@ -173,7 +170,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="NIW-Jm-4BJ"/>
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="34.632683658170919"/>
         </scene>

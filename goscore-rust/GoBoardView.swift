@@ -19,8 +19,8 @@ class GoBoardView : UIView {
         get { return _board }
         set {
             _board = newValue
-            self.setNeedsDisplay()
             self.updateConstraints()
+            self.setNeedsDisplay()
         }
     }
     var aspectRatio: NSLayoutConstraint?
@@ -44,13 +44,16 @@ class GoBoardView : UIView {
     
     override func updateConstraints() {
         super.updateConstraints()
+        
         if let constraint = aspectRatio {
             self.removeConstraint(constraint)
         }
-        aspectRatio = NSLayoutConstraint(item: self, attribute: .width, relatedBy: .equal,
-                                         toItem: self, attribute: .height,
-                                         multiplier: CGFloat(board.width+1) / CGFloat(board.height+1),
-                                         constant: 0)
+        
+        aspectRatio = NSLayoutConstraint(
+            item: self, attribute: .width, relatedBy: .equal,
+            toItem: self, attribute: .height,
+            multiplier: CGFloat(board.width+1) / CGFloat(board.height+1),
+            constant: 0)
         self.addConstraint(aspectRatio!)
     }
 

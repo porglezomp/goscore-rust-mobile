@@ -34,6 +34,7 @@ class ViewController: UncoveredContentViewController, GoBoardDelegate {
         let b = Stone(color: .black)
         var d = Stone(color: .black)
         d.dead = true
+        
         board = GoBoard(stones: [e,e,e,b,e,e,e,
                                  e,e,e,b,e,e,e,
                                  e,e,e,b,e,e,e,
@@ -42,6 +43,7 @@ class ViewController: UncoveredContentViewController, GoBoardDelegate {
                                  w,e,e,w,e,e,d,
                                  e,w,e,w,e,d,e],
                         width: 7, height: 7)
+        
         reScoreBoard()
         highlightButtons()
     }
@@ -69,8 +71,8 @@ class ViewController: UncoveredContentViewController, GoBoardDelegate {
     }
     
     func touch(at boardLocation: (row: UInt, col: UInt)) {
-        print(boardLocation)
         var stone = board[boardLocation]
+        
         switch tool {
         case .color:
             switch stone.color {
@@ -86,57 +88,34 @@ class ViewController: UncoveredContentViewController, GoBoardDelegate {
         case .dead:
             stone.dead = !stone.dead
         }
+        
         board[boardLocation] = stone
         reScoreBoard()
     }
     
-    @IBAction func updateWidth(_ sender: AnyObject?) {
-        guard let sender = sender as? UITextField
-            else { return }
-        
-        guard let text = sender.text
-            else { return }
-        
-        guard let width = UInt(text)
-            else { return }
-        
-        if width == board.width {
-            return
-        }
+    @IBAction func updateWidth(_ sender: UITextView) {
+        guard let text = sender.text else { return }
+        guard let width = UInt(text) else { return }
+        if width == board.width { return }
         
         board = GoBoard(width: width, height: board.height)
         self.goView.board = board
         reScoreBoard()
     }
     
-    @IBAction func updateHeight(_ sender: AnyObject?) {
-        guard let sender = sender as? UITextField
-            else { return }
-        
-        guard let text = sender.text
-            else { return }
-        
-        guard let height = UInt(text)
-            else { return }
-        
-        if height == board.height {
-            return
-        }
+    @IBAction func updateHeight(_ sender: UITextView) {
+        guard let text = sender.text else { return }
+        guard let height = UInt(text) else { return }
+        if height == board.height { return }
         
         board = GoBoard(width: board.width, height: height)
         self.goView.board = board
         reScoreBoard()
     }
     
-    @IBAction func updateKomi(_ sender: AnyObject?) {
-        guard let sender = sender as? UITextField
-            else { return }
-        
-        guard let text = sender.text
-            else { return }
-        
-        guard let komi = UInt(text)
-            else { return }
+    @IBAction func updateKomi(_ sender: UITextView) {
+        guard let text = sender.text else { return }
+        guard let komi = UInt(text) else { return }
         
         self.komi = komi
         reScoreBoard()

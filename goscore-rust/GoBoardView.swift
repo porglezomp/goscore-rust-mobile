@@ -16,6 +16,7 @@ class GoBoardView : UIView {
         set {
             _board = newValue
             self.setNeedsDisplay()
+            self.updateConstraints()
         }
     }
     var aspectRatio: NSLayoutConstraint?

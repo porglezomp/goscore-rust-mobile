@@ -18,6 +18,7 @@
 		3CB8547A1DEA9687007F905E /* GoBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB854791DEA9687007F905E /* GoBoard.swift */; };
 		3CB8547D1DEAA9A0007F905E /* libgoscore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB8547C1DEAA9A0007F905E /* libgoscore.a */; };
 		3CB854821DEAAAD5007F905E /* RawGoBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB854811DEAAAD5007F905E /* RawGoBoard.m */; };
+		3CB854871DEB5FF2007F905E /* UncoveredContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB854861DEB5FF2007F905E /* UncoveredContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		3CB8547F1DEAAAD4007F905E /* goscore-rust-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "goscore-rust-Bridging-Header.h"; sourceTree = "<group>"; };
 		3CB854801DEAAAD5007F905E /* RawGoBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RawGoBoard.h; sourceTree = "<group>"; };
 		3CB854811DEAAAD5007F905E /* RawGoBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RawGoBoard.m; sourceTree = "<group>"; };
+		3CB854861DEB5FF2007F905E /* UncoveredContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UncoveredContentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				3CB854551DEA9454007F905E /* Info.plist */,
 				3CB854771DEA9483007F905E /* GoBoardView.swift */,
 				3CB854791DEA9687007F905E /* GoBoard.swift */,
+				3CB854861DEB5FF2007F905E /* UncoveredContentViewController.swift */,
 			);
 			path = "goscore-rust";
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CB854871DEB5FF2007F905E /* UncoveredContentViewController.swift in Sources */,
 				3CB854781DEA9483007F905E /* GoBoardView.swift in Sources */,
 				3CB8544C1DEA9454007F905E /* ViewController.swift in Sources */,
 				3CB854821DEAAAD5007F905E /* RawGoBoard.m in Sources */,

@@ -8,15 +8,27 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UncoveredContentViewController, GoBoardDelegate {
     
-    var board: GoBoard = GoBoard()
+    enum Tool {
+        case color
+        case dead
+    }
+
     @IBOutlet var goView: GoBoardView!
     @IBOutlet var scoreLabel: UILabel!
+    @IBOutlet var colorButton: UIButton!
+    @IBOutlet var deadButton: UIButton!
+    
+    var board: GoBoard = GoBoard()
     var komi: UInt = 7
+    var tool: Tool = .color
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        goView.delegate = self
+        
         let e = Stone()
         let w = Stone(color: .white)
         let b = Stone(color: .black)
@@ -31,16 +43,21 @@ class ViewController: UIViewController {
                                  e,w,e,w,e,d,e],
                         width: 7, height: 7)
         reScoreBoard()
+        highlightButtons()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if touches.count == 1 {
-            let touch = touches.first!
-            touch.location(in: goView)
+    func highlightButtons() {
+        switch tool {
+        case .color:
+            colorButton.isSelected = true
+            deadButton.isSelected = false
+        case .dead:
+            colorButton.isSelected = false
+            deadButton.isSelected = true
         }
     }
     
@@ -51,7 +68,29 @@ class ViewController: UIViewController {
         goView.board = board
     }
     
-    @IBAction func updateWidth(sender: AnyObject?) {
+    func touch(at boardLocation: (row: UInt, col: UInt)) {
+        print(boardLocation)
+        var stone = board[boardLocation]
+        switch tool {
+        case .color:
+            switch stone.color {
+            case .none:
+                stone.color = .black
+                stone.dead = false
+            case .some(.black):
+                stone.color = .white
+            case .some(.white):
+                stone.color = nil
+                stone.dead = false
+            }
+        case .dead:
+            stone.dead = !stone.dead
+        }
+        board[boardLocation] = stone
+        reScoreBoard()
+    }
+    
+    @IBAction func updateWidth(_ sender: AnyObject?) {
         guard let sender = sender as? UITextField
             else { return }
         
@@ -70,7 +109,7 @@ class ViewController: UIViewController {
         reScoreBoard()
     }
     
-    @IBAction func updateHeight(sender: AnyObject?) {
+    @IBAction func updateHeight(_ sender: AnyObject?) {
         guard let sender = sender as? UITextField
             else { return }
         
@@ -89,7 +128,7 @@ class ViewController: UIViewController {
         reScoreBoard()
     }
     
-    @IBAction func updateKomi(sender: AnyObject?) {
+    @IBAction func updateKomi(_ sender: AnyObject?) {
         guard let sender = sender as? UITextField
             else { return }
         
@@ -101,6 +140,16 @@ class ViewController: UIViewController {
         
         self.komi = komi
         reScoreBoard()
+    }
+    
+    @IBAction func setToolToColor(_ sender: AnyObject?) {
+        tool = .color
+        highlightButtons()
+    }
+    
+    @IBAction func setToolToDead(_ sender: AnyObject?) {
+        tool = .dead
+        highlightButtons()
     }
 
 }

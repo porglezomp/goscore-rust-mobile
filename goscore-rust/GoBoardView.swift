@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol GoBoardDelegate {
+    func touch(at boardLocation: (row: UInt, col: UInt));
+}
+
 class GoBoardView : UIView {
     
     private var _board: GoBoard = GoBoard()
@@ -20,6 +24,23 @@ class GoBoardView : UIView {
         }
     }
     var aspectRatio: NSLayoutConstraint?
+    var delegate: GoBoardDelegate?
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if touches.count != 1 {
+            return
+        }
+        
+        let location = touches.first!.location(in: self)
+        let col = UInt(location.x / self.frame.width * CGFloat(board.width+1) - 0.5)
+        let row = UInt(location.y / self.frame.height * CGFloat(board.height+1) - 0.5)
+        
+        if 0 > col || col >= board.width || 0 > row || row >= board.height {
+            return
+        }
+        
+        delegate?.touch(at: (row, col))
+    }
     
     override func updateConstraints() {
         super.updateConstraints()

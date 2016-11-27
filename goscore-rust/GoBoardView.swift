@@ -40,14 +40,14 @@ class GoBoardView : UIView {
         
         for row in 0..<board.height {
             let y = CGFloat(row) * cellHeight + cellHeight
-            context.addLines(between: [CGPoint(x: cellWidth, y: y),
-                                       CGPoint(x: size - cellWidth, y: y)])
+            context.move(to: CGPoint(x: cellWidth, y: y))
+            context.addLine(to: CGPoint(x: size - cellWidth, y: y))
         }
         
         for col in 0..<board.width {
             let x = CGFloat(col) * cellWidth + cellWidth
-            context.addLines(between: [CGPoint(x: x, y: cellHeight),
-                                       CGPoint(x: x, y: size - cellHeight)])
+            context.move(to: CGPoint(x: x, y: cellHeight))
+            context.addLine(to: CGPoint(x: x, y: size - cellHeight))
         }
         
         context.strokePath()
@@ -94,6 +94,24 @@ class GoBoardView : UIView {
         }
         
         // Mark the dead stones
+        context.setStrokeColor(UIColor.red.cgColor)
+        context.setLineCap(.round)
+        context.setLineWidth(4)
+        for row in 0..<board.height {
+            for col in 0..<board.width {
+                let x = CGFloat(col) * cellWidth + cellWidth * (2/3)
+                let y = CGFloat(row) * cellHeight + cellHeight * (2/3)
+                if board[(row, col)].dead {
+                    print("\(row) \(col) is dead")
+                    context.move(to: CGPoint(x: x, y: y))
+                    context.addLine(to: CGPoint(x: x + cellWidth * (2/3),
+                                                y: y + cellHeight * (2/3)))
+                    context.move(to: CGPoint(x: x, y: y + cellHeight * (2/3)))
+                    context.addLine(to: CGPoint(x: x + cellWidth * (2/3), y: y))
+                }
+            }
+        }
+        context.strokePath()
     }
     
 }

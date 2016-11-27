@@ -20,12 +20,14 @@ class ViewController: UIViewController {
         let b = Stone(color: .black)
         var d = Stone(color: .black)
         d.dead = true
-        board = GoBoard(stones: [e,e,b,e,e,
-                                 e,e,b,e,e,
-                                 b,b,b,w,w,
-//                                 w,e,w,e,d,
-                                 e,w,w,d,e],
-                        width: 5, height: 4)
+        board = GoBoard(stones: [e,e,e,b,e,e,e,
+                                 e,e,e,b,e,e,e,
+                                 e,e,e,b,e,e,e,
+                                 b,b,b,b,w,w,w,
+                                 e,e,e,w,e,e,e,
+                                 w,e,e,w,e,e,d,
+                                 e,w,e,w,e,d,e],
+                        width: 7, height: 7)
         board.scoreStones()
         goView.board = board
     }

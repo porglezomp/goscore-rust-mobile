@@ -103,7 +103,8 @@ class GoBoardView : UIView {
         // Mark the dead stones
         context.setStrokeColor(UIColor.red.cgColor)
         context.setLineCap(.round)
-        context.setLineWidth(8)
+        let scaler = CGFloat(max(board.width, board.height))
+        context.setLineWidth(40 / scaler)
         for row in 0..<board.height {
             for col in 0..<board.width {
                 let x = CGFloat(col) * cellWidth + cellWidth * (2/3)
